@@ -173,3 +173,19 @@ main details summary {
     0%   { transform: rotateX(0deg) rotateY(0deg); }
     100% { transform: rotateX(360deg) rotateY(360deg); }
 }
+
+
+/* Table */
+#table table {
+    border-collapse: collapse;
+    border: 1px solid rgba(255, 0, 255, 0.25);
+    border-radius: 30px;
+}
+
+#table table td, #table table th {
+    padding: 10px;
+}
+
+#table table td, #table table th {
+    border: 1px solid rgba(255, 0, 255, 0.25);
+}
