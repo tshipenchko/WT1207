@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
+    <title>TaskMaster - Create Task</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>TaskMaster</h1>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="body.html">Tasks</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h3>Create a New Task</h3>
+            <p>Use the form below to create a new task:</p>
+            <form>
+                <div class="input-container">
+                    <label for="taskName">Task Name:</label><br>
+                    <input type="text" id="taskName" name="taskName" required>
+                </div>
+
+                <div class="input-container">
+                    <label for="taskDescription">Task Description:</label><br>
+                    <textarea id="taskDescription" name="taskDescription" rows="4" cols="50"></textarea>
+                </div>
+
+                <div class="input-container">
+                    <label for="taskPriority">Priority:</label><br>
+                    <select id="taskPriority" name="taskPriority">
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                </div>
+
+                <div class="input-container">
+                    <label for="taskDateTime">Task Date and Time:</label><br>
+                    <input type="datetime-local" id="taskDateTime" name="taskDateTime">
+                </div>
+
+                <input type="submit" value="Create Task">
+            </form>
+            <hr>
+            <h4>Your Tasks</h4>
+            <ol id="task-list">
+                <li><strong>Task 1:</strong> This is the description of Task 1. <time datetime="2008-02-14 20:00">Valentines day</time></li>
+                <li><strong>Task 2:</strong> This is the description of Task 2. <time datetime="2008-02-14 20:00">Valentines day</time></li>
+                <li><strong>Task 3:</strong> This is the description of Task 3. <time datetime="2008-02-14 20:00">Valentines day</time></li>
+            </ol>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            &copy; 2023 TaskMaster
+        </div>
+    </footer>
+</body>
+
+</html>
