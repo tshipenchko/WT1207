@@ -1,0 +1,36 @@
+:root {
+    --color-primary: black;
+    --bg-color-primary: white;
+
+    --color-secondary: white;
+    --bg-color-secondary: #7e3232;
+
+    --color-highlight: #7e3232;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: var(--color-primary);
+    background: var(--bg-color-primary);
+
+    min-height: 100vh;
+}
+
+header {
+    color: var(--color-secondary);
+    background: var(--bg-color-secondary);
+}
+
+.highlight {
+    color: var(--color-highlight);
+}
+
+footer {
+    background: var(--bg-color-secondary);
+    color: var(--color-secondary);
+}
+
+.text-indent-2 {
+    text-indent: 2em;
+}
