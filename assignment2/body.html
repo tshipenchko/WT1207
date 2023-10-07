@@ -4,69 +4,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="icon" type="image/x-icon" href="img/favicon.png">
     <title>TaskMaster - Create Task</title>
-</head>
 
+    <link rel="stylesheet" type="text/css" href="styles2.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
 <body>
-    <header>
+
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark">
         <div class="container">
             <h1>TaskMaster</h1>
-            <ul class="nav-list">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="body.html">Tasks</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="body.html">Tasks</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </header>
+    </nav>
+</header>
 
-    <main>
-        <div class="container">
-            <h3>Create a New Task</h3>
-            <p>Use the form below to create a new task:</p>
-            <form>
-                <div class="input-container">
-                    <label for="taskName">Task Name:</label><br>
-                    <input type="text" id="taskName" name="taskName" required>
+<main>
+    <section class="container text-center py-2">
+        <h3>Create a New Task</h3>
+        <p>Use the form below to create a new task:</p>
+        <form>
+            <div class="mb-3">
+                <label for="taskName" class="form-label">Task Name:</label>
+                <input type="text" class="form-control" id="taskName" name="taskName" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="taskDescription" class="form-label">Task Description:</label>
+                <textarea class="form-control" id="taskDescription" name="taskDescription" rows="4"></textarea>
+            </div>
+
+            <div class="mb-3">
+                <label for="taskPriority" class="form-label">Priority:</label>
+                <select class="form-select" id="taskPriority" name="taskPriority">
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="taskDateTime" class="form-label">Task Date and Time:</label>
+                <input type="datetime-local" class="form-control" id="taskDateTime" name="taskDateTime">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Create Task</button>
+        </form>
+    </section>
+
+    <hr>
+
+    <section class="container py-2">
+        <h4 class="text-center">Your Tasks</h4>
+        <ul class="list-group list-group-numbered" id="task-list">
+            <li class="list-group-item d-flex align-items-start">
+                <div class="me-auto">
+                    <div class="fw-bold">Extend car insurance</div>
+                    At least I'll be covered if you get into an accident.
                 </div>
 
-                <div class="input-container">
-                    <label for="taskDescription">Task Description:</label><br>
-                    <textarea id="taskDescription" name="taskDescription" rows="4" cols="50"></textarea>
+                <time datetime="2023-10-09 00:00" class="badge text-success">2023-10-09</time>
+                <span class="badge bg-danger rounded-pill">High</span>
+            </li>
+            <li class="list-group-item d-flex align-items-start">
+                <div class="me-auto">
+                    <div class="fw-bold">Finish report</div>
+                    Make sure to include all the necessary details.
                 </div>
 
-                <div class="input-container">
-                    <label for="taskPriority">Priority:</label><br>
-                    <select id="taskPriority" name="taskPriority">
-                        <option value="low">Low</option>
-                        <option value="medium">Medium</option>
-                        <option value="high">High</option>
-                    </select>
+                <time datetime="2023-10-09 00:00" class="badge text-danger">Yesterday</time>
+                <span class="badge bg-danger rounded-pill">High</span>
+            </li>
+            <li class="list-group-item d-flex align-items-start">
+                <div class="me-auto">
+                    <div class="fw-bold">Call mom</div>
+                    It's been a while since we last talked.
                 </div>
 
-                <div class="input-container">
-                    <label for="taskDateTime">Task Date and Time:</label><br>
-                    <input type="datetime-local" id="taskDateTime" name="taskDateTime">
+                <time datetime="2023-10-09 00:00" class="badge text-warning">Today</time>
+                <span class="badge bg-success rounded-pill">Medium</span>
+            </li>
+            <li class="list-group-item d-flex align-items-start">
+                <div class="me-auto">
+                    <div class="fw-bold">Clean the garage</div>
+                    It's starting to get cluttered in there.
                 </div>
 
-                <input type="submit" value="Create Task">
-            </form>
-            <hr>
-            <h4>Your Tasks</h4>
-            <ol id="task-list">
-                <li><strong>Task 1:</strong> This is the description of Task 1. <time datetime="2008-02-14 20:00">Valentines day</time></li>
-                <li><strong>Task 2:</strong> This is the description of Task 2. <time datetime="2008-02-14 20:00">Valentines day</time></li>
-                <li><strong>Task 3:</strong> This is the description of Task 3. <time datetime="2008-02-14 20:00">Valentines day</time></li>
-            </ol>
-        </div>
-    </main>
+                <time class="badge text-success" datetime="2023-10-20 00:00">2023-10-09</time>
+                <span class="badge bg-primary rounded-pill">Low</span>
+            </li>
+            <li class="list-group-item d-flex align-items-start">
+                <div class="me-auto">
+                    <div class="fw-bold">Buy groceries</div>
+                    We're running low on essentials.
+                </div>
 
-    <footer>
-        <div class="container">
-            &copy; 2023 TaskMaster
-        </div>
-    </footer>
+                <span class="badge text-warning">Tomorrow</span>
+                <span class="badge bg-success rounded-pill">Medium</span>
+            </li>
+        </ul>
+    </section>
+</main>
+
+<footer class="text-white text-left py-2">
+    <div class="container">
+        <p>&copy; 2023 TaskMaster</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
 </body>
-
 </html>
