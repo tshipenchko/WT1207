@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+
+    <!--suppress JSUnresolvedLibraryURL -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+
+<div class="container pt-2">
+    <form id="calculatorForm">
+        <div class="mb-3">
+            <label for="firstNumber" class="form-label">First Number</label>
+            <input type="number" class="form-control" id="firstNumber">
+        </div>
+        <div class="mb-3">
+            <label for="secondNumber" class="form-label">Second Number</label>
+            <input type="number" class="form-control" id="secondNumber">
+        </div>
+
+        <div class="mb-3">
+            <label for="resultNumber" class="form-label">Result Number</label>
+            <input type="text" class="form-control" id="resultNumber">
+        </div>
+
+        <select class="form-select" aria-label="Operation" id="operator">
+            <option value="addition" selected>Addition</option>
+            <option value="subtraction">Subtraction</option>
+            <option value="multiplication">Multiplication</option>
+            <option value="division">Division</option>
+            <option value="modulus">Modulus</option>
+            <option value="power">Power</option>
+        </select>
+    </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="script.js" type="module"></script>
+</body>
+</html>
