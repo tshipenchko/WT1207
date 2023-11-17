@@ -1,0 +1,69 @@
+:root {
+    --sub-color: #444;
+    --bg-color: #111;
+    --caret-color: #fff;
+    --roundness: 0.25rem;
+}
+
+#wordsInput {
+    height: 0;
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    display: block;
+}
+
+#words {
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-content: flex-start;
+    user-select: none;
+}
+
+.word {
+    margin: 5px 5px;
+    color: dimgray;
+    display: flex;
+    transition: 0.25s;
+    border-bottom: 2px solid transparent;
+}
+
+.word.error {
+    border-bottom: 2px solid #da3333;
+    text-shadow: 1px 0 0 #111, 2px 0 0 #111,
+    -1px 0 0 #111, -2px 0 0 #111,
+    0 1px 0 #111, 1px 1px 0 #111,
+    -1px 1px 0 #111;
+}
+
+.word.active {
+    color: darkgray;
+}
+
+.word .letter {
+    height: 1rem;
+    line-height: 1rem;
+}
+
+.word .letter.correct {
+    color: white;
+}
+
+.word .letter.incorrect {
+    color: maroon;
+}
+
+.word .letter.incorrect.extra {
+    color: red;
+}
+
+.word .letter.missing {
+    opacity: 0.5;
+}
+
+.hidden {
+    display: none !important;
+}
