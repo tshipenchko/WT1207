@@ -28,6 +28,8 @@ const keyCodes = {
 function setFocus(focus) {
     if (focus) {
         $("body").css("cursor", "none");
+        showCaret();
+        stopCaretAnimation();
     } else {
         startCaretAnimation();
         $("body").css("cursor", "default");
@@ -74,19 +76,16 @@ function highlightBadWord() {
 }
 
 function hideCaret() {
-    $caret.addClass("hidden");
+    $caret.addClass("d-none");
 }
 
 function showCaret() {
-    $caret.removeClass("hidden");
+    $caret.removeClass("d-none");
     startCaretAnimation();
 }
 
 function stopCaretAnimation() {
-    $caret.css({
-        "animation-name": "none",
-        "background-color": "var(white)"
-    });
+    $caret.css("animation-name", "none");
 }
 
 function startCaretAnimation() {
