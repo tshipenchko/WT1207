@@ -6,26 +6,26 @@
 }
 
 #caret {
-  width: 2px;
-  height: 1.5rem;
-  background: var(--caret-color);
-  animation-name: caretFlash;
-  animation-iteration-count: infinite;
-  animation-duration: 1s;
-  position: absolute;
-  transition: 0.05s;
+    width: 2px;
+    height: 1.5rem;
+    background: var(--caret-color);
+    animation-name: caretFlash;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    position: absolute;
+    transition: 0.05s;
 }
 
 @keyframes caretFlash {
-  0% {
-    background: transparent;
-  }
-  50% {
-    background: var(--caret-color);
-  }
-  100% {
-    background: transparent;
-  }
+    0% {
+        background: transparent;
+    }
+    50% {
+        background: var(--caret-color);
+    }
+    100% {
+        background: transparent;
+    }
 }
 
 #wordsInput {
