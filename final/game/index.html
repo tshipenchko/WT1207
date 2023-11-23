@@ -18,12 +18,11 @@
 <body class="d-flex flex-column min-vh-100">
 
 
-
 <!-- Header -->
 <header>
     <nav class="navbar navbar-expand-sm bg-body-tertiary">
         <div class="container">
-            <a class="navbar-brand" href="#">Navbar</a>
+            <a class="navbar-brand" href="../index.html">MiniType</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-nav"
                     aria-controls="navbar-nav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -46,15 +45,20 @@
 </header>
 
 <!-- Monkey Type game -->
-<main class="container">
-    <h1>Mini Type</h1>
-    <div id="caret" class="d-none"></div>
-    <div id="words" class=""></div>
-    <label for="wordsInput"></label>
-    <input id="wordsInput" class="" tabindex="0">
-    <span id="restartButton" tabindex="0"><i class="bi bi-arrow-clockwise"></i></span>
-    <span id="timer">00</span>
-    <span id="lifeWPM">00</span>
+<main class="container flex-grow-1 d-flex  align-items-center">
+    <div>
+        <div id="caret" class="d-none"></div>
+        <div id="words" class=""></div>
+        <label for="wordsInput"></label>
+        <input id="wordsInput" class="" tabindex="0">
+        <span id="restartButton" tabindex="0"><i class="bi bi-arrow-clockwise"></i></span>
+        <span>
+            <i class="bi bi-clock me-2"></i><span id="timer">00</span>
+        </span>
+        <span>
+            <i class="bi bi-speedometer2 me-2"></i><span id="lifeWPM">00</span>
+        </span>
+    </div>
 </main>
 
 <!-- Footer -->
