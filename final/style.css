@@ -53,6 +53,29 @@
     width: calc(var(--size) * 6);
 }
 
+
+/* Section WhyPlay */
+#why-play-carousel .big-icon {
+    font-size: 5em;
+}
+
+#why-play-carousel .custom-slide {
+    width: 60%;
+    margin: 4rem auto;
+    text-align: center;
+}
+
+#why-play-carousel .carousel-control-prev-icon,
+#why-play-carousel .carousel-control-next-icon {
+    filter: invert(0);
+}
+
+#why-play-carousel .carousel-indicators button {
+    background-color: #ccc;
+}
+
+
+/* Media queries */
 @media (max-width: 1200px) {
     /* bootstrap xl */
     .key {
@@ -63,6 +86,10 @@
 @media (max-width: 576px) {
     /* bootstrap sm */
     .key {
-        --size: 40px;
+        --size: 30px;
+    }
+
+    #why-play-carousel .custom-slide {
+        width: 80%;
     }
 }
