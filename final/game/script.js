@@ -162,7 +162,11 @@ function restartTest() {
     let oldHeight = $words.height();
     setFocus(false);
     $wordsInput.focus();
-    currentText = generateText();
+    if (wordsModeCount === 0) {
+        currentText = customText;
+    } else {
+        currentText = generateText();
+    }
     initWords();
     testActive = false;
     startCaretAnimation();
@@ -179,7 +183,8 @@ function restartTest() {
 }
 
 function changeCustomText() {
-    currentText = prompt("Enter your custom text", customText);
+    customText = prompt("Enter your custom text", customText);
+    currentText = customText;
     wordsModeCount = 0;
     initWords();
 }
