@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <title>MiniType</title>
+
+    <!--suppress JSUnresolvedLibraryURL -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+          crossorigin="anonymous">
+    <!--suppress JSUnresolvedLibraryURL -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+
+<!-- Header -->
+<header>
+    <nav class="navbar navbar-expand-sm bg-body-tertiary">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">MiniType</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-nav"
+                    aria-controls="navbar-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar-nav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../game/index.html">Game</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <span class="nav-link dropdown-toggle active" role="button" data-bs-toggle="dropdown"
+                              aria-expanded="false">
+                            More Info<i class="bi bi-info-lg"></i>
+                        </span>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item active" href="../about/index.html">About Us</a></li>
+                            <li><a class="dropdown-item" href="../blog/index.html">Blog</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<section class="container py-3">
+    <h3>About Us and the Website</h3>
+    <div class="accordion" id="accordion-about">
+        <!-- Research -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#research" aria-expanded="false" aria-controls="creativity">
+                    Do research about your topic
+                    <i class="bi bi-search ms-1"></i>
+                </button>
+            </h2>
+            <div id="research" class="accordion-collapse collapse" data-bs-parent="#accordion-about">
+                <div class="accordion-body">
+                    Creating full-featured typing game is not so easy. I had to do a lot of research about the topic.
+                    <ul>
+                        <li>First, I had to find a way to track the user's types and check if they are correct.</li>
+                        <li>Second, I had to find a way to generate random words and move caret's position.</li>
+                        <li>Third, I had to find a way to calculate the user's typing speed and accuracy.</li>
+                        <li>Finally, I had to find a way to make the game look good and be user-friendly.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Wireframe -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#wireframe" aria-expanded="false" aria-controls="creativity">
+                    Draw a Wireframe
+                    <i class="bi bi-easel ms-1"></i>
+                </button>
+            </h2>
+            <div id="wireframe" class="accordion-collapse collapse" data-bs-parent="#accordion-about">
+                <div class="accordion-body">
+                    Here you can see the <a href="../assets/wireframe.pdf">wireframe</a> I drew.
+                </div>
+            </div>
+        </div>
+
+        <!-- Design and Structure -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#design-and-structure" aria-expanded="false" aria-controls="creativity">
+                    Design and Structure
+                    <i class="bi bi-balloon ms-1"></i>
+                </button>
+            </h2>
+            <div id="design-and-structure" class="accordion-collapse collapse" data-bs-parent="#accordion-about">
+                <div class="accordion-body">
+                    I used all Bootstrap features to make the website look good and be user-friendly.
+                    <ul>
+                        <li>I chose to use Bootstrap 5's dark theme for the website.</li>
+                        <li>I also used grid and flexbox systems to make the website responsive.</li>
+                        <li>I added prebuilt components such as navbar, buttons, carousel, accordion, and cards.</li>
+                </div>
+            </div>
+        </div>
+
+        <!-- Creativity Section -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#creativity" aria-expanded="false" aria-controls="creativity">
+                    Creativity
+                    <i class="bi bi-lightbulb ms-1"></i>
+                </button>
+            </h2>
+            <div id="creativity" class="accordion-collapse collapse" data-bs-parent="#accordion-about">
+                <div class="accordion-body">
+                    I used all my creativity to make the website look good and be user-friendly.
+                    Staring from the topic of the website, ending with the font family and content.
+                </div>
+            </div>
+        </div>
+
+        <!-- JavaScript -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#javascript" aria-expanded="false" aria-controls="javascript">
+                    JavaScript Utilization
+                    <i class="bi bi-lightning ms-1"></i>
+                </button>
+            </h2>
+            <div id="javascript" class="accordion-collapse collapse" data-bs-parent="#accordion-about">
+                <div class="accordion-body">
+                    I implemented various functionalities such as the moving caret,
+                    word list generation, and other essential features,
+                    contributing significantly to the game's interactive elements.
+                    Most of the code was crafted using pure JavaScript.
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#jquery" aria-expanded="false" aria-controls="jquery">
+                    jQuery Integration
+                    <i class="bi bi-code-slash ms-1"></i>
+                </button>
+            </h2>
+            <div id="jquery" class="accordion-collapse collapse" data-bs-parent="#accordion-about">
+                <div class="accordion-body">
+                    I used jQuery to simplify the code and make it more readable.
+                    I used jQuery to select elements, add event listeners, change CSS properties, add animations.
+                </div>
+            </div>
+        </div>
+
+        <!-- GitHub Pages Section -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#githubPages" aria-expanded="false" aria-controls="githubPages">
+                    GitHub Pages Deployment
+                    <i class="bi bi-github ms-1"></i>
+                </button>
+            </h2>
+            <div id="githubPages" class="accordion-collapse collapse" data-bs-parent="#accordion-about">
+                <div class="accordion-body">
+                    Finally, I successfully published the finalized website on GitHub Pages.
+                    You can check it out <a href="https://tshipenchko.github.io/WT1207/final/index.html">here</a>.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<div class="flex-grow-1"></div>
+<footer class="footer mt-4 py-2 bg-body-tertiary">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 text-center text-md-start">
+                <p>MiniType - Typing Game 2023 &copy; All rights reserved.</p>
+            </div>
+            <div class="col-md-6 text-center">
+                <a href="https://github.com/tshipenchko/WT1207/issues/4" target="_blank"
+                   class="me-1 text-decoration-none">
+                    <i class="bi bi-github"></i>
+                </a>
+                <a href="https://t.me/posted" target="_blank" class="text-decoration-none">
+                    <i class="bi bi-telegram"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</body>
+</html>
