@@ -97,6 +97,7 @@ main {
     transition: 0.25s;
     cursor: pointer;
 }
+
 .choice.active {
     color: white;
 }

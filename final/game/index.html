@@ -65,6 +65,12 @@
         <span>
             <i class="bi bi-speedometer2 me-2"></i><span id="lifeWPM">00</span>
         </span>
+        <span>
+            <i class="bi bi-play" id="music-button" style="cursor: pointer"></i>
+            <i class="bi bi-volume-down" id="volume-down" style="cursor: pointer"></i>
+            <i class="bi bi-volume-up" id="volume-up" style="cursor: pointer"></i>
+            <audio src="../assets/music.mp3" loop="loop" class="d-none" id="music"></audio>
+        </span>
         <div>
             <span>Choose word count:</span>
             <span class="choice active">30</span>
@@ -89,5 +95,6 @@
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 <script src="words.js"></script>
 <script src="script.js"></script>
+<script src="music.js"></script>
 </body>
 </html>

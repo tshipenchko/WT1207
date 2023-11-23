@@ -341,8 +341,8 @@ $choices.each((index, choice) => {
         const text = $(choice).text();
         if (text === "custom text") {
             changeCustomText();
-            choice.addClass("active");
             $choices.removeClass("active");
+            choice.classList.add("active");
             return;
         }
 
@@ -352,7 +352,7 @@ $choices.each((index, choice) => {
         wordsModeCount = wordsCount;
         currentText = generateText();
         initWords();
-        choice.addClass("active");
         $choices.removeClass("active");
+        choice.classList.add("active");
     });
 });
