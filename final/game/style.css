@@ -91,3 +91,12 @@ main {
     font-family: "JetBrains Mono", monospace;
     font-size: 1.5rem;
 }
+
+.choice {
+    color: dimgray;
+    transition: 0.25s;
+    cursor: pointer;
+}
+.choice.active {
+    color: white;
+}

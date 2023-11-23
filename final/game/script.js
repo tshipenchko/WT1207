@@ -7,7 +7,9 @@ let currentInput = "";
 let testActive = false;
 let testStart, testEnd;
 let missedChars = 0;
+let wordsModeCount = 30;
 
+let currentText = "The quick brown fox jumped over the lazy dog";
 let customText = "The quick brown fox jumped over the lazy dog";
 
 setInterval(() => {
@@ -36,12 +38,33 @@ const $wordsInput = $("#wordsInput");
 const $restartButton = $("#restartButton");
 const $timer = $("#timer");
 const $lifeWPM = $("#lifeWPM");
+const $choices = $(".choice");
+
 
 // Utils
 const keyCodes = {
     backspace: 8,
     enter: 13,
     space: 32,
+}
+
+function generateText() {
+    let generatedText = '';
+
+    for (let i = 0; i < wordsModeCount; i++) {
+        const randomIndex = Math.floor(Math.random() * words.length);
+        const word = words[randomIndex];
+
+        if (i === 0) {
+            generatedText += word.charAt(0).toUpperCase() + word.slice(1);
+        } else {
+            generatedText += word;
+        }
+
+        generatedText += ' ';
+    }
+
+    return generatedText.trim();
 }
 
 
@@ -65,7 +88,7 @@ function initWords() {
     currentInput = "";
 
     // if (testMode == "custom")
-    wordsList = [...customText.split(" ")];
+    wordsList = [...currentText.split(" ")];
 
     showWords();
 }
@@ -139,6 +162,7 @@ function restartTest() {
     let oldHeight = $words.height();
     setFocus(false);
     $wordsInput.focus();
+    currentText = generateText();
     initWords();
     testActive = false;
     startCaretAnimation();
@@ -155,7 +179,8 @@ function restartTest() {
 }
 
 function changeCustomText() {
-    customText = prompt("Enter your custom text");
+    currentText = prompt("Enter your custom text", customText);
+    wordsModeCount = 0;
     initWords();
 }
 
@@ -309,3 +334,25 @@ $restartButton.keypress((event) => {
 
 $(window).resize(() => updateCaretPosition());
 $(document).mousemove(() => setFocus(false));
+
+// Some choices
+$choices.each((index, choice) => {
+    $(choice).click(() => {
+        const text = $(choice).text();
+        if (text === "custom text") {
+            changeCustomText();
+            choice.addClass("active");
+            $choices.removeClass("active");
+            return;
+        }
+
+        const wordsCount = parseInt(text);
+        if (isNaN(wordsCount)) return;
+
+        wordsModeCount = wordsCount;
+        currentText = generateText();
+        initWords();
+        choice.addClass("active");
+        $choices.removeClass("active");
+    });
+});
