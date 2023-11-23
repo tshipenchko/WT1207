@@ -46,18 +46,18 @@ $(() => {
 
 /* Section HowTo: keyboard */
 document.addEventListener("DOMContentLoaded", () => {
-    const keyboardRows = ['QWERTYUIOP', 'ASDFGHJKL', 'ZXCVBNM', ' '];
-    const keyboardText = keyboardRows.join('');
+    const keyboardRows = ["QWERTYUIOP", "ASDFGHJKL", "ZXCVBNM", " "];
+    const keyboardText = keyboardRows.join("");
     const keyboardFragment = document.createDocumentFragment();
 
     const generateKeyboard = () => {
         keyboardRows.forEach(row => {
-            const newRow = document.createElement('div');
-            newRow.classList.add('row');
+            const newRow = document.createElement("div");
+            newRow.classList.add("row");
 
             row.split('').forEach(letter => {
-                const key = document.createElement('div');
-                key.classList.add('key');
+                const key = document.createElement("div");
+                key.classList.add("key");
                 key.textContent = letter;
                 newRow.appendChild(key);
             });
@@ -79,9 +79,9 @@ document.addEventListener("DOMContentLoaded", () => {
             const charIndex = keyboardText.indexOf(char);
             const key = keys[charIndex];
 
-            key.classList.add('active');
+            key.classList.add("active");
             setTimeout(() => {
-                key.classList.remove('active');
+                key.classList.remove("active");
             }, 1000);
 
             index = (index + 1) % text.length;
@@ -94,4 +94,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
     generateKeyboard();
     animateKeyboad();
+});
+
+
+/* Section WhyPlay: carousel animation */
+document.addEventListener("DOMContentLoaded", function () {
+    const carousel = document.getElementById('why-play-carousel');
+    const iconElements = carousel.querySelectorAll('.icon-element');
+
+    carousel.addEventListener("slide.bs.carousel", (event) => {
+        const activeSlide = event.relatedTarget;
+        const activeIconElement = activeSlide.querySelector('.big-icon');
+
+        iconElements.forEach((icon) => {
+            icon.classList.remove("show");
+        });
+
+        activeIconElement.classList.add("show");
+    });
 });

@@ -59,6 +59,10 @@
     font-size: 5em;
 }
 
+#why-play-carousel .big-icon.show {
+    animation: carouselIconFadeIn 2s ease-in-out;
+}
+
 #why-play-carousel .custom-slide {
     width: 60%;
     margin: 4rem auto;
@@ -74,6 +78,14 @@
     background-color: #ccc;
 }
 
+@keyframes carouselIconFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 
 /* Media queries */
 @media (max-width: 1200px) {
