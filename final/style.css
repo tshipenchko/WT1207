@@ -4,12 +4,65 @@
 }
 
 @keyframes blink-caret {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
 }
 
 #caret {
     display: inline-block;
     vertical-align: top;
     font-size: 1.2em;
+}
+
+
+/* Section HowTo: keyboard */
+.keyboard {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: auto;
+    gap: 1px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+.key {
+    --size: 50px;
+    width: var(--size);
+    height: var(--size);
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-right: 1px;
+}
+
+.key.active {
+    background-color: green;
+}
+
+.keyboard:last-child .row:last-child .key {
+    /* Last element is space */
+    width: calc(var(--size) * 6);
+}
+
+@media (max-width: 1200px) {
+    /* bootstrap xl */
+    .key {
+        --size: 45px;
+    }
+}
+
+@media (max-width: 576px) {
+    /* bootstrap sm */
+    .key {
+        --size: 40px;
+    }
 }

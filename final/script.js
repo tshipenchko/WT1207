@@ -42,3 +42,56 @@ $(() => {
 
     type();
 });
+
+
+/* Section HowTo: keyboard */
+document.addEventListener("DOMContentLoaded", () => {
+    const keyboardRows = ['QWERTYUIOP', 'ASDFGHJKL', 'ZXCVBNM', ' '];
+    const keyboardText = keyboardRows.join('');
+    const keyboardFragment = document.createDocumentFragment();
+
+    const generateKeyboard = () => {
+        keyboardRows.forEach(row => {
+            const newRow = document.createElement('div');
+            newRow.classList.add('row');
+
+            row.split('').forEach(letter => {
+                const key = document.createElement('div');
+                key.classList.add('key');
+                key.textContent = letter;
+                newRow.appendChild(key);
+            });
+
+            keyboardFragment.appendChild(newRow);
+        });
+
+        const $keyboard = document.querySelector('.keyboard');
+        $keyboard.appendChild(keyboardFragment);
+    }
+
+    const animateKeyboad = () => {
+        const text = "Hello world".toUpperCase();
+        const keys = Array.from(document.querySelectorAll('.keyboard .key'));
+
+        let index = 0;
+        const type = () => {
+            const char = text[index];
+            const charIndex = keyboardText.indexOf(char);
+            const key = keys[charIndex];
+
+            key.classList.add('active');
+            setTimeout(() => {
+                key.classList.remove('active');
+            }, 1000);
+
+            index = (index + 1) % text.length;
+
+            setTimeout(type, index === 0 ? 2200 : 1100);
+        }
+
+        setTimeout(type, 1100);
+    }
+
+    generateKeyboard();
+    animateKeyboad();
+});

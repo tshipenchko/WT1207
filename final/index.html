@@ -1,19 +1,19 @@
 <!doctype html>
-<html lang="en" data-bs-theme="dark">
+<html data-bs-theme="dark" lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="favicon.ico" rel="icon" type="image/x-icon">
     <title>MiniType</title>
 
     <!--suppress JSUnresolvedLibraryURL -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-          rel="stylesheet"
+    <link crossorigin="anonymous"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
           integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-          crossorigin="anonymous">
+          rel="stylesheet">
     <!--suppress JSUnresolvedLibraryURL -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
 </head>
 <body class="d-flex flex-column min-vh-100">
 
@@ -23,14 +23,15 @@
     <nav class="navbar navbar-expand-sm bg-body-tertiary">
         <div class="container">
             <a class="navbar-brand" href="index.html">MiniType</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-nav"
-                    aria-controls="navbar-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <button aria-controls="navbar-nav" aria-expanded="false" aria-label="Toggle navigation"
+                    class="navbar-toggler"
+                    data-bs-target="#navbar-nav" data-bs-toggle="collapse" type="button">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbar-nav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        <a aria-current="page" class="nav-link active" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="game/index.html">Game</a>
@@ -49,20 +50,48 @@
 <section class="container d-flex align-items-center justify-content-center flex-column" style="min-height: 50vh">
     <h1 class="mb-4">MiniType <i class="bi bi-keyboard"></i></h1>
     <p>
-        <span id="typing-text" class="fs-5 text-muted"></span><span id="caret" class="caret-animation">|</span>
+        <span class="fs-5 text-muted" id="typing-text"></span><span class="caret-animation" id="caret">|</span>
     </p>
 </section>
+
+
+<!-- Section HowTo -->
+<div class="container">
+    <div class="row">
+        <!-- Keyboard Animation Section (Left Side) -->
+        <section class="col-lg-6 col-md-12 keyboard-section">
+            <div class="keyboard">
+                <!-- Keyboard keys will be generated here -->
+            </div>
+        </section>
+
+        <!-- Explanation Section (Right Side) -->
+        <section class="col-lg-6 col-md-12 explanation-section">
+            <div class="explanation">
+                <h2>How It Works</h2>
+                <ul>
+                    <li>Step 1: Explanation point 1</li>
+                    <li>Step 2: Explanation point 2</li>
+                    <li>Step 3: Explanation point 3</li>
+                    <!-- Add more explanation points as needed -->
+                </ul>
+            </div>
+        </section>
+    </div>
+</div>
+
 
 <!-- Footer -->
 <div class="flex-grow-1"></div>
 <footer class="bg-body-secondary text-light">
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+<script crossorigin="anonymous"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"
-        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script crossorigin="anonymous"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
