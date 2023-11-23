@@ -1,0 +1,15 @@
+/* Section Main: typing animation */
+.caret-animation {
+    animation: blink-caret 0.8s infinite;
+}
+
+@keyframes blink-caret {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+#caret {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 1.2em;
+}
