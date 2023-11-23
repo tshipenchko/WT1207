@@ -348,6 +348,7 @@ $choices.each((index, choice) => {
             changeCustomText();
             $choices.removeClass("active");
             choice.classList.add("active");
+            $wordsInput.focus();
             return;
         }
 
@@ -359,5 +360,6 @@ $choices.each((index, choice) => {
         initWords();
         $choices.removeClass("active");
         choice.classList.add("active");
+        $wordsInput.focus();
     });
 });
