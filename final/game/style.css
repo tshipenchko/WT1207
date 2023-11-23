@@ -101,3 +101,7 @@ main {
 .choice.active {
     color: white;
 }
+
+.clickable {
+    cursor: pointer;
+}
