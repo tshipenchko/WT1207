@@ -10,12 +10,32 @@ let missedChars = 0;
 
 let customText = "The quick brown fox jumped over the lazy dog";
 
+setInterval(() => {
+    if (!testActive) return;
+    let time = Math.round((Date.now() - testStart) / 1000);
+
+    $timer.text((time < 10 ? "0" : "") + time);
+}, 250);
+
+setInterval(() => {
+    if (!testActive) return;
+    let time = Math.round((Date.now() - testStart) / 1000);
+    let wroteTotal = wordsList.slice(0, currentWordIndex).join(" ").length;
+    let wrote = Math.max(0, wroteTotal - missedChars);
+    let wpm = Math.round(wrote / 5 / (time / 60));
+
+    if (isNaN(wpm)) wpm = 0;
+    else if (wpm === Infinity) wpm = 0;
+    $lifeWPM.text((wpm < 10 ? "0" : "") + wpm);
+}, 250);
 
 // DOM jQuery elements
 const $words = $("#words");
 const $caret = $("#caret");
 const $wordsInput = $("#wordsInput");
 const $restartButton = $("#restartButton");
+const $timer = $("#timer");
+const $lifeWPM = $("#lifeWPM");
 
 // Utils
 const keyCodes = {
@@ -118,11 +138,12 @@ function updateCaretPosition() {
 function restartTest() {
     let oldHeight = $words.height();
     setFocus(false);
-    $("#liveWpm").css("opacity", 0);
     $wordsInput.focus();
     initWords();
     testActive = false;
     startCaretAnimation();
+    $lifeWPM.text("00");
+    $timer.text("00");
     let newHeight = $words.css("height", "fit-content").height();
     $words
         .stop(true, true)
@@ -170,7 +191,7 @@ function compareInput() {
 function showResult() {
     testEnd = Date.now();
     testActive = false;
-    alert("Test finished");
+    // alert("Test finished");
 }
 
 function onFocusedBackspace(event) {
